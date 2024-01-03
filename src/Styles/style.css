@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  background-color: whitesmoke;
+  font-family: Montserrat, sans-serif;
+}
+
+.container1 {
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.container2 {
+  margin: 1.5em 1.5em;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.divider {
+  width: 5em;
+}
+
+.filter {
+  width: 1.5em;
+}
+
+.search {
+  width: 1.5em;
+}
+
+.container3 {
+  max-width: 100%;
+  margin: 5em auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.forts {
+  border-radius: 10px;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0.1em 0.1em 1em gray;
+}
+
+.overlay-text {
+  /* position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%); */
+  color: black;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.forts img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.svg {
+  display: flex;
+  align-items: center;
+}
+
+.filter {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.hamburger-menu {
+  position: fixed; /* Use fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100vh; /* Set height to 100% of the viewport */
+  width: 200px;
+  background-color: rgba(255, 255, 255); /* light background color */
+  z-index: 100;
+
+  padding: 20px;
+  box-sizing: border-box;
+  color: #333; /* Text color for better contrast */
+}
+
+.hamburger-menu.open {
+  display: block;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 40px; /* Set the width of the close icon */
+  height: 40px; /* Set the height of the close icon */
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.menu-header p {
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Add vertical scrollbar if needed */
+  max-height: 500px; /* Set a max height to limit the size */
+}
+
+.checkbox-item {
+  margin-bottom: 10px;
+  display: flex; /* Use flexbox to align checkbox and label */
+  align-items: center; /* Align items vertically in the flex container */
+}
+
+.checkbox-item input {
+  margin-right: 8px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.apply-button {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.reset-button {
+  background-color: #ccc; /* You can choose the appropriate color */
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .container3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .container3 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
